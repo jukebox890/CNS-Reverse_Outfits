@@ -1,0 +1,330 @@
+{
+  "schemaVersion": 1,
+  "version": "0.4.10",
+  "releaseArchive": {
+    "filename": "Outfit-Colours-Preparer-0.4.10.zip",
+    "sha256": "97b7618d30569024a835e2feec2b5e052b1be929e6db54b7da4eb7a62c302883",
+    "bytes": 142332471
+  },
+  "files": [
+    {
+      "path": "Preparer.cs",
+      "sha256": "8449ae91988bd8a5ecbf5b8b377c0bde3b226a8f8df0aaed15077206e7af3444",
+      "kind": "compiler-input"
+    },
+    {
+      "path": "PreparedInstaller.cs",
+      "sha256": "5fc31cdeffd33cea756ca2aa3240365f90cbb822af027b2ebfbe1075c828745b",
+      "kind": "compiler-input"
+    },
+    {
+      "path": "SettingsPanel.cs",
+      "sha256": "1456222688ec8d1be05bd66870681910eb084a257f4b9fa7d045d7c6e5933895",
+      "kind": "compiler-input"
+    },
+    {
+      "path": "AppIcon.cs",
+      "sha256": "42a6dac2c1b7e16cfa6634739cf58286669b56652c39a783102a7f8468d50c72",
+      "kind": "compiler-input"
+    },
+    {
+      "path": "Branding/OutfitColours.ico",
+      "sha256": "e603be0bf5796d6cc7b800e4a17381b3b21459cb39e4c687ae625167ab81dadc",
+      "kind": "compiler-input"
+    },
+    {
+      "path": "app/Assets/accessory_sources.py",
+      "sha256": "f19224bc62adcc2dd26e75ce32ba3f56a5966a0ca132b80207f2654cc13a7169",
+      "kind": "shipped-file",
+      "releasePath": "Assets/accessory_sources.py"
+    },
+    {
+      "path": "app/Assets/assets/asset_writer.py",
+      "sha256": "ac6cc58dc91699ece9a8cbd9bfeec614df87f739de311e5b2a90d194bfe793c0",
+      "kind": "shipped-file",
+      "releasePath": "Assets/assets/asset_writer.py"
+    },
+    {
+      "path": "app/Assets/assets/vendor/texconv-v0.6.0/LICENSE",
+      "sha256": "ac29bc4af314f4c6698b40ca3de2faa279d60e4421673c390f4c9dcf75ad40c6",
+      "kind": "shipped-file",
+      "releasePath": "Assets/assets/vendor/texconv-v0.6.0/LICENSE"
+    },
+    {
+      "path": "app/Assets/assets/vendor/texconv-v0.6.0/THIRD_PARTY_LICENSES.txt",
+      "sha256": "22fe768226b31f83a39e57c573531351eb212844e40a057552b1c48cea4cabe1",
+      "kind": "shipped-file",
+      "releasePath": "Assets/assets/vendor/texconv-v0.6.0/THIRD_PARTY_LICENSES.txt"
+    },
+    {
+      "path": "app/Assets/assets/vendor/UE4-DDS-Tools/LICENSE",
+      "sha256": "8796d8e0882f97916d33321f72488b2abd543d1ac5ce666ca15f9d0a20404a11",
+      "kind": "shipped-file",
+      "releasePath": "Assets/assets/vendor/UE4-DDS-Tools/LICENSE"
+    },
+    {
+      "path": "app/Assets/assets/vendor/UE4-DDS-Tools/src/directx/dds.py",
+      "sha256": "a75569832c88e225ee7c2252675c23ea3b858e170022a90de3b39ea2686e9f90",
+      "kind": "shipped-file",
+      "releasePath": "Assets/assets/vendor/UE4-DDS-Tools/src/directx/dds.py"
+    },
+    {
+      "path": "app/Assets/assets/vendor/UE4-DDS-Tools/src/directx/dxgi_format.py",
+      "sha256": "ec08153062ed3e6df8b03814c4c06dc4681021f4f68a085169ecb1d522623db4",
+      "kind": "shipped-file",
+      "releasePath": "Assets/assets/vendor/UE4-DDS-Tools/src/directx/dxgi_format.py"
+    },
+    {
+      "path": "app/Assets/assets/vendor/UE4-DDS-Tools/src/unreal/archive.py",
+      "sha256": "9cac04fdb9e58ab81eb28b414f6c41fe86206ea0822c0dabdb479b26724459c8",
+      "kind": "shipped-file",
+      "releasePath": "Assets/assets/vendor/UE4-DDS-Tools/src/unreal/archive.py"
+    },
+    {
+      "path": "app/Assets/assets/vendor/UE4-DDS-Tools/src/unreal/city_hash.py",
+      "sha256": "4241f334c7f5fba51d3479d8f8f0e3af1630789f2f379da30bc6d3b814520274",
+      "kind": "shipped-file",
+      "releasePath": "Assets/assets/vendor/UE4-DDS-Tools/src/unreal/city_hash.py"
+    },
+    {
+      "path": "app/Assets/assets/vendor/UE4-DDS-Tools/src/unreal/crc.py",
+      "sha256": "ccc53ca97b1f87658ab357a94abac967b602a85efdb71bb12436f207fa232da7",
+      "kind": "shipped-file",
+      "releasePath": "Assets/assets/vendor/UE4-DDS-Tools/src/unreal/crc.py"
+    },
+    {
+      "path": "app/Assets/assets/vendor/UE4-DDS-Tools/src/unreal/data_resource.py",
+      "sha256": "794f9b5fe9d865abb3745aa2825a566d2fcbaad2190eaa2fd904236628b0b760",
+      "kind": "shipped-file",
+      "releasePath": "Assets/assets/vendor/UE4-DDS-Tools/src/unreal/data_resource.py"
+    },
+    {
+      "path": "app/Assets/assets/vendor/UE4-DDS-Tools/src/unreal/file_summary.py",
+      "sha256": "9ae35f1f8e217ebf5ad8e050d21a043c59886cbc5627af0759db66fed4bcb7ed",
+      "kind": "shipped-file",
+      "releasePath": "Assets/assets/vendor/UE4-DDS-Tools/src/unreal/file_summary.py"
+    },
+    {
+      "path": "app/Assets/assets/vendor/UE4-DDS-Tools/src/unreal/import_export.py",
+      "sha256": "09a1b14c7b25dd9d7d373931daab5783202fedd27de0302cb5c3838983b626ad",
+      "kind": "shipped-file",
+      "releasePath": "Assets/assets/vendor/UE4-DDS-Tools/src/unreal/import_export.py"
+    },
+    {
+      "path": "app/Assets/assets/vendor/UE4-DDS-Tools/src/unreal/uasset.py",
+      "sha256": "7a764a6a1bb18b27d632a3c83e9f424ec4b697bbedd5dc1bb56518a9fda2806b",
+      "kind": "shipped-file",
+      "releasePath": "Assets/assets/vendor/UE4-DDS-Tools/src/unreal/uasset.py"
+    },
+    {
+      "path": "app/Assets/assets/vendor/UE4-DDS-Tools/src/unreal/umipmap.py",
+      "sha256": "64f511733bc43297293ed75773d0871c3ede982bb54352c91099b4e30172ea4d",
+      "kind": "shipped-file",
+      "releasePath": "Assets/assets/vendor/UE4-DDS-Tools/src/unreal/umipmap.py"
+    },
+    {
+      "path": "app/Assets/assets/vendor/UE4-DDS-Tools/src/unreal/utexture.py",
+      "sha256": "d096b2c6310daa2666196ae7e7256022381b98778a652b4ae421cf085ce99cb0",
+      "kind": "shipped-file",
+      "releasePath": "Assets/assets/vendor/UE4-DDS-Tools/src/unreal/utexture.py"
+    },
+    {
+      "path": "app/Assets/assets/vendor/UE4-DDS-Tools/src/unreal/version.py",
+      "sha256": "e23896c74dc61d35d6b8d552024fd85cb5505fe6149d3d6321765dc562bfe9bb",
+      "kind": "shipped-file",
+      "releasePath": "Assets/assets/vendor/UE4-DDS-Tools/src/unreal/version.py"
+    },
+    {
+      "path": "app/Assets/assets/vendor/UE4-DDS-Tools/src/util.py",
+      "sha256": "57ed62e8774fcef2d3b9e6d34f6f4830dfbc822e11e7cee539a7e36127395daf",
+      "kind": "shipped-file",
+      "releasePath": "Assets/assets/vendor/UE4-DDS-Tools/src/util.py"
+    },
+    {
+      "path": "app/Assets/chunk_inventory.py",
+      "sha256": "a9270ae07bdab3badadf2b8e0688480ed935f5248205254d7f76a212189868b6",
+      "kind": "shipped-file",
+      "releasePath": "Assets/chunk_inventory.py"
+    },
+    {
+      "path": "app/Assets/cns_compat.py",
+      "sha256": "87d5c1bfed435b422fb36e62cf0f8c355f4c4c1f56e8e1b69fac77482a0970dc",
+      "kind": "shipped-file",
+      "releasePath": "Assets/cns_compat.py"
+    },
+    {
+      "path": "app/Assets/cns_integration.py",
+      "sha256": "1d41171429a8edfa15bd34f408650db5472c90b0ddd77097ccd0b2f7c6c426d4",
+      "kind": "shipped-file",
+      "releasePath": "Assets/cns_integration.py"
+    },
+    {
+      "path": "app/Assets/CNSRuntime/AccessoryLink.lua",
+      "sha256": "2f9eff284a98b4aa3820472a84d1605d4a8d67fe8e8ab22a05d2e6f3b4f86925",
+      "kind": "shipped-file",
+      "releasePath": "Assets/CNSRuntime/AccessoryLink.lua"
+    },
+    {
+      "path": "app/Assets/CNSRuntime/Init.lua",
+      "sha256": "8f74c8e4de43379f6c4c59de0446c8ed94c9f5b4d40860bde9027d3e9dcedf94",
+      "kind": "shipped-file",
+      "releasePath": "Assets/CNSRuntime/Init.lua"
+    },
+    {
+      "path": "app/Assets/CNSRuntime/MetadataBridge.lua",
+      "sha256": "dd1d62a7518b26f0ca90f21d4a8cbbb3ac2e0a865d77671e3d68aac83afd1be7",
+      "kind": "shipped-file",
+      "releasePath": "Assets/CNSRuntime/MetadataBridge.lua"
+    },
+    {
+      "path": "app/Assets/colour_bake.py",
+      "sha256": "7d97efeda7e1bd51c6e68b392b67d4c177d1c1ef9b3ace8484c5fcfc481dfd4e",
+      "kind": "shipped-file",
+      "releasePath": "Assets/colour_bake.py"
+    },
+    {
+      "path": "app/Assets/dependency_check.py",
+      "sha256": "8d5c50d00637a1694056ac4c0d1cd3ed85168c229f700983be3c51cb7a967e01",
+      "kind": "shipped-file",
+      "releasePath": "Assets/dependency_check.py"
+    },
+    {
+      "path": "app/Assets/DistributionManifest.json",
+      "sha256": "060b250844e72a14725268424d90963acb6fc1e0170dfecffd58c135526b7ec9",
+      "kind": "shipped-file",
+      "releasePath": "Assets/DistributionManifest.json"
+    },
+    {
+      "path": "app/Assets/engine_free_backend.py",
+      "sha256": "ea7dbb47b3156521d98ea06303d663ebbe3affb85ca124e1fc1a70572f208a82",
+      "kind": "shipped-file",
+      "releasePath": "Assets/engine_free_backend.py"
+    },
+    {
+      "path": "app/Assets/Extractor.ps1",
+      "sha256": "b7ee8ad39ed561e1dc74921976345bf9dc87fecd705a07919831f8221ef4eec4",
+      "kind": "shipped-file",
+      "releasePath": "Assets/Extractor.ps1"
+    },
+    {
+      "path": "app/Assets/installer/export_installer.py",
+      "sha256": "386c1a9f566ce3793edd5391a977d1c01699c15a944fa2ac244534a06044ca4a",
+      "kind": "shipped-file",
+      "releasePath": "Assets/installer/export_installer.py"
+    },
+    {
+      "path": "app/Assets/installer/Install-Prepared.ps1",
+      "sha256": "445ae5648afa995276f0c7e4bb5b475b144246c9dbf69887730984a0cf7f3a1a",
+      "kind": "shipped-file",
+      "releasePath": "Assets/installer/Install-Prepared.ps1"
+    },
+    {
+      "path": "app/Assets/material_bindings.py",
+      "sha256": "6a0a04125d865b210f6dac39b70fad3bbe72b78e91035bbfb535d4758393f284",
+      "kind": "shipped-file",
+      "releasePath": "Assets/material_bindings.py"
+    },
+    {
+      "path": "app/Assets/packaging/pack_legacy.py",
+      "sha256": "5b48e3f7e17034edf17933af10a6476ee632d1069551b573bb2a3db1ad5426c1",
+      "kind": "shipped-file",
+      "releasePath": "Assets/packaging/pack_legacy.py"
+    },
+    {
+      "path": "app/Assets/packaging/retoc-v0.1.5/LICENSE",
+      "sha256": "047220d71910580f08051543a363dafb2669319ffab6bdbd0fb19733541020bc",
+      "kind": "shipped-file",
+      "releasePath": "Assets/packaging/retoc-v0.1.5/LICENSE"
+    },
+    {
+      "path": "app/Assets/packaging/sb_container.py",
+      "sha256": "f23ff8bcbf4600227ba68c06b0d2fe0f2a889f7311a76482a260e620ae022b3c",
+      "kind": "shipped-file",
+      "releasePath": "Assets/packaging/sb_container.py"
+    },
+    {
+      "path": "app/Assets/prep.py",
+      "sha256": "d67cb0335a634c8dc6ea54c7b0640b7dfeec8291ff4705e83815b46c4e8b32a0",
+      "kind": "shipped-file",
+      "releasePath": "Assets/prep.py"
+    },
+    {
+      "path": "app/Assets/preparation_status.py",
+      "sha256": "2d862f80bf234ec22f7dd7e58479474ae8354a23387c40074cb5832967b808ee",
+      "kind": "shipped-file",
+      "releasePath": "Assets/preparation_status.py"
+    },
+    {
+      "path": "app/Assets/prepared_library.py",
+      "sha256": "f4b9bbbe2e7fb4556fc6b972bcac068dd5129a96b8538239ddff7dd18ad722d6",
+      "kind": "shipped-file",
+      "releasePath": "Assets/prepared_library.py"
+    },
+    {
+      "path": "app/Assets/public_integration.py",
+      "sha256": "751e0bc6844ab067443171721eed46e08d4d1b3051fa1c64e9c9bf2037ad7958",
+      "kind": "shipped-file",
+      "releasePath": "Assets/public_integration.py"
+    },
+    {
+      "path": "app/Assets/reader_setup.py",
+      "sha256": "c32c6e3e246080ab9de05be1c669663c069acaccbe03236e1662d63f7a6163c8",
+      "kind": "shipped-file",
+      "releasePath": "Assets/reader_setup.py"
+    },
+    {
+      "path": "app/Assets/README.md",
+      "sha256": "70fddd07e9b0e6981c4e4027c22e510404c1f766808840319e2b37e07b23e090",
+      "kind": "shipped-file",
+      "releasePath": "Assets/README.md"
+    },
+    {
+      "path": "app/Assets/release/reviewed-dependencies.json",
+      "sha256": "c0359310a2ed6d65ac13652277789208135f9515f53694883f57d83d51a43322",
+      "kind": "shipped-file",
+      "releasePath": "Assets/release/reviewed-dependencies.json"
+    },
+    {
+      "path": "app/Assets/RELEASE-NOTES.md",
+      "sha256": "4b1c956db5837709cc9c25266187a22fa6126ce6d1b7cf38e06dbe96a57aaa74",
+      "kind": "shipped-file",
+      "releasePath": "Assets/RELEASE-NOTES.md"
+    },
+    {
+      "path": "app/Assets/runtime-provenance.json",
+      "sha256": "3c2951bcadb93ec85d7b31301ae15a93b5f0a06decb9697997e2a152ba277e33",
+      "kind": "shipped-file",
+      "releasePath": "Assets/runtime-provenance.json"
+    },
+    {
+      "path": "app/Assets/sample/colour.png",
+      "sha256": "24203b362a2bf238328e4f9fb7229d818387d1401610dc8b0de6106833cb7901",
+      "kind": "shipped-file",
+      "releasePath": "Assets/sample/colour.png"
+    },
+    {
+      "path": "app/Assets/sample/job.json",
+      "sha256": "f852e8e0330ff0d9d4eb2125244e086da5f19aa2f112f7ceee075f51516d9662",
+      "kind": "shipped-file",
+      "releasePath": "Assets/sample/job.json"
+    },
+    {
+      "path": "app/Assets/skin_reset.py",
+      "sha256": "1c9fdbd074fcc10d8ec7593c78a872c8bcc27706593197644dd4382b41c84d67",
+      "kind": "shipped-file",
+      "releasePath": "Assets/skin_reset.py"
+    },
+    {
+      "path": "app/Assets/skin_safety.py",
+      "sha256": "e9bf0d50a25d85228fe770795e5fe50dcd01d5cb905c97943a0a22fa3d867e4d",
+      "kind": "shipped-file",
+      "releasePath": "Assets/skin_safety.py"
+    },
+    {
+      "path": "app/Assets/uninstall_selected.py",
+      "sha256": "a22d3f5bad292f87524d90c5d2759a85b1deda8342536f7fc00be6089adaa456",
+      "kind": "shipped-file",
+      "releasePath": "Assets/uninstall_selected.py"
+    }
+  ]
+}

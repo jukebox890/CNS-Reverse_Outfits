@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "dependencies": [
+    {
+      "name": "UE4-DDS-Tools serializer",
+      "license": "MIT",
+      "source": "https://github.com/matyalatte/UE4-DDS-Tools",
+      "redistributionReviewed": true,
+      "files": [
+        "assets/vendor/UE4-DDS-Tools/src/util.py",
+        "assets/vendor/UE4-DDS-Tools/src/directx/dds.py",
+        "assets/vendor/UE4-DDS-Tools/src/directx/dxgi_format.py",
+        "assets/vendor/UE4-DDS-Tools/src/unreal/archive.py",
+        "assets/vendor/UE4-DDS-Tools/src/unreal/city_hash.py",
+        "assets/vendor/UE4-DDS-Tools/src/unreal/crc.py",
+        "assets/vendor/UE4-DDS-Tools/src/unreal/data_resource.py",
+        "assets/vendor/UE4-DDS-Tools/src/unreal/file_summary.py",
+        "assets/vendor/UE4-DDS-Tools/src/unreal/import_export.py",
+        "assets/vendor/UE4-DDS-Tools/src/unreal/uasset.py",
+        "assets/vendor/UE4-DDS-Tools/src/unreal/umipmap.py",
+        "assets/vendor/UE4-DDS-Tools/src/unreal/utexture.py",
+        "assets/vendor/UE4-DDS-Tools/src/unreal/version.py"
+      ],
+      "noticeFiles": [
+        "assets/vendor/UE4-DDS-Tools/LICENSE"
+      ],
+      "sha256": {
+        "assets/vendor/UE4-DDS-Tools/src/util.py": "57ed62e8774fcef2d3b9e6d34f6f4830dfbc822e11e7cee539a7e36127395daf",
+        "assets/vendor/UE4-DDS-Tools/src/directx/dds.py": "a75569832c88e225ee7c2252675c23ea3b858e170022a90de3b39ea2686e9f90",
+        "assets/vendor/UE4-DDS-Tools/src/directx/dxgi_format.py": "ec08153062ed3e6df8b03814c4c06dc4681021f4f68a085169ecb1d522623db4",
+        "assets/vendor/UE4-DDS-Tools/src/unreal/archive.py": "9cac04fdb9e58ab81eb28b414f6c41fe86206ea0822c0dabdb479b26724459c8",
+        "assets/vendor/UE4-DDS-Tools/src/unreal/city_hash.py": "4241f334c7f5fba51d3479d8f8f0e3af1630789f2f379da30bc6d3b814520274",
+        "assets/vendor/UE4-DDS-Tools/src/unreal/crc.py": "ccc53ca97b1f87658ab357a94abac967b602a85efdb71bb12436f207fa232da7",
+        "assets/vendor/UE4-DDS-Tools/src/unreal/data_resource.py": "794f9b5fe9d865abb3745aa2825a566d2fcbaad2190eaa2fd904236628b0b760",
+        "assets/vendor/UE4-DDS-Tools/src/unreal/file_summary.py": "9ae35f1f8e217ebf5ad8e050d21a043c59886cbc5627af0759db66fed4bcb7ed",
+        "assets/vendor/UE4-DDS-Tools/src/unreal/import_export.py": "09a1b14c7b25dd9d7d373931daab5783202fedd27de0302cb5c3838983b626ad",
+        "assets/vendor/UE4-DDS-Tools/src/unreal/uasset.py": "7a764a6a1bb18b27d632a3c83e9f424ec4b697bbedd5dc1bb56518a9fda2806b",
+        "assets/vendor/UE4-DDS-Tools/src/unreal/umipmap.py": "64f511733bc43297293ed75773d0871c3ede982bb54352c91099b4e30172ea4d",
+        "assets/vendor/UE4-DDS-Tools/src/unreal/utexture.py": "d096b2c6310daa2666196ae7e7256022381b98778a652b4ae421cf085ce99cb0",
+        "assets/vendor/UE4-DDS-Tools/src/unreal/version.py": "e23896c74dc61d35d6b8d552024fd85cb5505fe6149d3d6321765dc562bfe9bb"
+      }
+    },
+    {
+      "name": "Texconv-Custom-DLL 0.6.0",
+      "license": "MIT plus bundled component notices",
+      "source": "https://github.com/matyalatte/Texconv-Custom-DLL/releases/tag/v0.6.0",
+      "redistributionReviewed": true,
+      "files": [
+        "assets/vendor/texconv-v0.6.0/texconv.exe"
+      ],
+      "noticeFiles": [
+        "assets/vendor/texconv-v0.6.0/LICENSE",
+        "assets/vendor/texconv-v0.6.0/THIRD_PARTY_LICENSES.txt"
+      ],
+      "sha256": {
+        "assets/vendor/texconv-v0.6.0/texconv.exe": "807fcfd0408fd4ce84d48074c53cfd276d91fce69b0083e4260440474ef1122d"
+      }
+    },
+    {
+      "name": "retoc 0.1.5",
+      "license": "MIT",
+      "source": "https://github.com/trumank/retoc/releases/tag/v0.1.5",
+      "redistributionReviewed": true,
+      "files": [
+        "packaging/retoc-v0.1.5/retoc.exe"
+      ],
+      "noticeFiles": [
+        "packaging/retoc-v0.1.5/LICENSE"
+      ],
+      "upstreamBuildPathsReviewed": true,
+      "reviewNote": "Exact unmodified upstream release binary includes its publisher's public Rust build paths. This exception covers generic upstream profile/debug paths only, never local private identifiers or development workspace paths.",
+      "sha256": {
+        "packaging/retoc-v0.1.5/retoc.exe": "a145f3557ec60b163ed1b78b2f380232d2753fa30350c8013c98e171db3ae7e7"
+      }
+    }
+  ]
+}

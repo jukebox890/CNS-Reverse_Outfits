@@ -1,0 +1,25 @@
+# Only the reviewed source snapshot belongs in this repository.
+/build/
+/runnable/
+/verification-output/
+__pycache__/
+*.pyc
+*.pyo
+*.pdb
+*.log
+*.zip
+*.whl
+*.exe
+*.dll
+*.pyd
+*.usmap
+*.pak
+*.ucas
+*.utoc
+Settings.json
+inventory.json
+Library/
+Runs/
+Reader/
+ReaderCache/
+InstallerBackups/

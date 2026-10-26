@@ -1,0 +1,2 @@
+* -text
+# Preserve shipped script bytes for checksum comparison, including line endings.

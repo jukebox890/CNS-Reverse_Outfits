@@ -1,0 +1,11 @@
+{
+  "outputRoot": "output",
+  "chunkId": 61947,
+  "textures": [
+    {
+      "assetPath": "/Game/OutfitReversalPrepared/Example/T_Colour.T_Colour",
+      "sourcePng": "colour.png"
+    }
+  ],
+  "materials": []
+}

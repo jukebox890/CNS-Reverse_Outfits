@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "name": "CPython Windows embeddable x64",
+      "version": "3.13.17",
+      "archive": "vendor/python-3.13.17-embed-amd64.zip",
+      "url": "https://www.python.org/ftp/python/3.13.17/python-3.13.17-embed-amd64.zip",
+      "sha256": "9e35319bffedab8b36ad44d8f377cb4f1733bcec257a0b6d04d94f01486ddb38",
+      "license": "PSF license plus original bundled component notices",
+      "redistributionReviewed": true,
+      "requiredNotices": [
+        "Assets/Runtime/Python/LICENSE.txt"
+      ],
+      "requiredNoticeSha256": {
+        "Assets/Runtime/Python/LICENSE.txt": "62bec384df47b0328307db41455ff6ea2559e5546b394ac69148561b21703120"
+      }
+    },
+    {
+      "name": "Pillow CPython 3.13 Windows x64 wheel",
+      "version": "12.3.0",
+      "archive": "vendor/pillow-12.3.0-cp313-cp313-win_amd64.whl",
+      "url": "https://files.pythonhosted.org/packages/a6/9b/7a58e61d62be561da3a356fe2384d4059a6345fc130e23ef1c36a5b81d24/pillow-12.3.0-cp313-cp313-win_amd64.whl",
+      "sha256": "1cca606cd25738df4ed873d5ad46bbdb3d83b5cbca291f6b4ff13a4df6b0bbe8",
+      "license": "MIT-CMU plus original bundled codec/font notices",
+      "redistributionReviewed": true,
+      "requiredNotices": [
+        "Assets/Runtime/Python/Lib/site-packages/pillow-12.3.0.dist-info/licenses/LICENSE"
+      ],
+      "requiredNoticeSha256": {
+        "Assets/Runtime/Python/Lib/site-packages/pillow-12.3.0.dist-info/licenses/LICENSE": "4f7866a74802c6326f81faff59a56546b6aec2b10b91973e0e9308de95e79857"
+      }
+    },
+    {
+      "name": "NumPy",
+      "version": "2.5.4",
+      "archive": "vendor/numpy-cp313-win_amd64.whl",
+      "url": "https://files.pythonhosted.org/packages/90/8c/140a40398a66b4471211be1affdb6ed24c486d581bd28d07b7f2fcb69540/numpy-2.5.4-cp313-cp313-win_amd64.whl",
+      "sha256": "8b4d2fd2d34e5f8c9235ee787de5631a37a28402b15cb80814df973d2be54129",
+      "license": "BSD-3-Clause plus original bundled numerical-library notices",
+      "redistributionReviewed": true,
+      "requiredNotices": [
+        "Assets/Runtime/Python/Lib/site-packages/numpy-2.5.4.dist-info/licenses/LICENSE.txt"
+      ],
+      "requiredNoticeSha256": {
+        "Assets/Runtime/Python/Lib/site-packages/numpy-2.5.4.dist-info/licenses/LICENSE.txt": "a804dff0ead9fadc5293456410bcbfc32bf024be9c4513459663fb7b442d2341"
+      }
+    },
+    {
+      "name": "PowerShell Windows x64",
+      "version": "7.6.8",
+      "archive": "vendor/PowerShell-win-x64.zip",
+      "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.6.8/PowerShell-7.6.8-win-x64.zip",
+      "sha256": "b9f074f923c499b51ec99d313da8e9ae90d17a9f3adf00c73d6189f34d908528",
+      "license": "MIT plus original .NET and bundled third-party notices",
+      "redistributionReviewed": true,
+      "requiredNotices": [
+        "Assets/Runtime/PowerShell/LICENSE.txt",
+        "Assets/Runtime/PowerShell/ThirdPartyNotices.txt"
+      ],
+      "requiredNoticeSha256": {
+        "Assets/Runtime/PowerShell/LICENSE.txt": "296604f12546653ed97726dc5fc2f3945d4cca1f07abd2589f531647177b06fc",
+        "Assets/Runtime/PowerShell/ThirdPartyNotices.txt": "5a2d792aa9dae45da7579398ca08c0fbb47d78c563cce492e311b9d5eb9a2142"
+      }
+    }
+  ]
+}
