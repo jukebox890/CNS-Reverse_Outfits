@@ -178,7 +178,7 @@
     },
     {
       "path": "Assets/installer/InstallPrepared.exe",
-      "sha256": "b3fd9f41fec1d137e0bee974d21960f955835161db7949a9c3b92e4d7f59c289",
+      "sha256": "0eb59c61b15589a427dc4f79628e5cdab6fec1739304142f5673781495f3c06c",
       "bytes": 357376
     },
     {
@@ -213,8 +213,8 @@
     },
     {
       "path": "Assets/prep.py",
-      "sha256": "d67cb0335a634c8dc6ea54c7b0640b7dfeec8291ff4705e83815b46c4e8b32a0",
-      "bytes": 49151
+      "sha256": "eda59c767aae6a3abc592a46e82dd7f5eaafee8f516ecff75a61ed1e37a3b9eb",
+      "bytes": 49336
     },
     {
       "path": "Assets/preparation_status.py",
@@ -238,7 +238,7 @@
     },
     {
       "path": "Assets/README.md",
-      "sha256": "70fddd07e9b0e6981c4e4027c22e510404c1f766808840319e2b37e07b23e090",
+      "sha256": "cf86206a53f79e66f2cd9434c470062b478a334be8903d997a6f5e53ff578279",
       "bytes": 7207
     },
     {
@@ -248,8 +248,8 @@
     },
     {
       "path": "Assets/RELEASE-NOTES.md",
-      "sha256": "4b1c956db5837709cc9c25266187a22fa6126ce6d1b7cf38e06dbe96a57aaa74",
-      "bytes": 492
+      "sha256": "1d682b8edb1919f3a884191e42fc1085172d0517cba080e6521de9835f97253b",
+      "bytes": 626
     },
     {
       "path": "Assets/Runtime/PowerShell/Accessibility.dll",
@@ -9068,7 +9068,7 @@
     },
     {
       "path": "OutfitColoursPreparer.exe",
-      "sha256": "33e2965dc403b8be4bb9360b1b7f323bcf79eab582d39217784b4df0d0f78795",
+      "sha256": "6d635dcf75a365010de235c073efc892171d15716ea6255171bfc2f266efd1ea",
       "bytes": 385536
     }
   ]

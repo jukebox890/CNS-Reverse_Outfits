@@ -1,8 +1,8 @@
 # Dependencies and source locations
 
-Exact versions, archive URLs and SHA256 values from the submitted 0.4.10 release are retained in [runtime-provenance.json](app/Assets/runtime-provenance.json) and [reviewed-dependencies.json](app/Assets/release/reviewed-dependencies.json). The full [release manifest](app/Assets/DistributionManifest.json) identifies distributed files. These are provenance records, not a promise that an upstream URL will remain available.
+Exact versions, archive URLs and SHA256 values from the submitted 0.4.11 release are retained in [runtime-provenance.json](app/Assets/runtime-provenance.json) and [reviewed-dependencies.json](app/Assets/release/reviewed-dependencies.json). The full [release manifest](app/Assets/DistributionManifest.json) identifies distributed files. These are provenance records, not a promise that an upstream URL will remain available.
 
-| Component | Version in 0.4.10 | Source / notices |
+| Component | Version in 0.4.11 | Source / notices |
 | --- | --- | --- |
 | CPython Windows embeddable x64 | 3.13.17 | [CPython](https://github.com/python/cpython), [official download](https://www.python.org/ftp/python/3.13.17/); PSF and bundled notices |
 | Pillow | 12.3.0 | [Pillow](https://github.com/python-pillow/Pillow); MIT-CMU and bundled codec/font notices |

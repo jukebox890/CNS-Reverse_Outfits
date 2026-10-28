@@ -66,5 +66,5 @@ $files = @(Get-ChildItem -LiteralPath $output -File -Recurse | Where-Object { $_
 })
 $json = [ordered]@{schemaVersion=1;files=$files} | ConvertTo-Json -Depth 6
 [IO.File]::WriteAllText($manifestPath,$json,[Text.UTF8Encoding]::new($false))
-if ($DistributionArchive) { Write-Output "Built runnable 0.4.10 review copy in $OutputName. No game files were changed." }
-else { Write-Output "Compiled both 0.4.10 EXEs in $OutputName. This source-only build still needs the runtime/data bundle; see BUILDING.md." }
+if ($DistributionArchive) { Write-Output "Built runnable 0.4.11 review copy in $OutputName. No game files were changed." }
+else { Write-Output "Compiled both 0.4.11 EXEs in $OutputName. This source-only build still needs the runtime/data bundle; see BUILDING.md." }

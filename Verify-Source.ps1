@@ -9,7 +9,7 @@ foreach ($row in $manifest.files) {
 }
 if ($DistributionArchive) {
     $archive = (Resolve-Path -LiteralPath $DistributionArchive).Path
-    if ((Get-FileHash -LiteralPath $archive -Algorithm SHA256).Hash -ne $manifest.releaseArchive.sha256) { throw 'This is not the reviewed 0.4.10 distribution archive.' }
+    if ((Get-FileHash -LiteralPath $archive -Algorithm SHA256).Hash -ne $manifest.releaseArchive.sha256) { throw 'This is not the reviewed 0.4.11 distribution archive.' }
     Add-Type -AssemblyName System.IO.Compression.FileSystem
     $zip = [IO.Compression.ZipFile]::OpenRead($archive)
     try {
@@ -24,4 +24,4 @@ if ($DistributionArchive) {
         Write-Output 'Original release hash and all copied source files verified.'
     } finally { $zip.Dispose() }
 }
-Write-Output "Verified $($manifest.files.Count) source/compiler-input checksums for 0.4.10."
+Write-Output "Verified $($manifest.files.Count) source/compiler-input checksums for 0.4.11."

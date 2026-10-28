@@ -1,4 +1,4 @@
-# Outfit Colours 0.4.10
+# Outfit Colours 0.4.11
 
 Prepare alternate colours for your installed custom CNS outfits, then select them
 alongside the originals in the game's nanosuit menu.

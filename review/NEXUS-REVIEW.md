@@ -1,10 +1,10 @@
-# Review guide — 0.4.10
+# Review guide â€” 0.4.11
 
 ## Review scope
 
-This repository accompanies the unchanged `Outfit-Colours-Preparer-0.4.10.zip` Nexus upload. Its original SHA256 and size are in SourceManifest.json. Source manifest entries marked `shipped-file` are copied byte-for-byte from that archive; `compiler-input` entries identify the C# source and embedded icon used for the custom EXEs.
+This repository accompanies the unchanged `Outfit-Colours-Preparer-0.4.11.zip` Nexus upload. Its original SHA256 and size are in SourceManifest.json. Source manifest entries marked `shipped-file` are copied byte-for-byte from that archive; `compiler-input` entries identify the C# source and embedded icon used for the custom EXEs.
 
-The release manifest covers the full portable bundle, including third-party files not duplicated in Git. There is no private development history, machine-specific configuration or prepared outfit library in this snapshot. Publishing source does not itself guarantee scanner approval or establish that every game/outfit combination is compatible.
+The release manifest covers the full portable bundle, including third-party files not duplicated in Git. There is no private development history, machine-specific configuration or prepared outfit library in this snapshot. Repository history contains the earlier public 0.4.10 review snapshot. Publishing source does not itself guarantee scanner approval or establish that every game/outfit combination is compatible.
 
 ## Entry points
 

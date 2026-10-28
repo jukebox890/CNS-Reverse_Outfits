@@ -140,7 +140,9 @@ def prepare_extraction(settings, records, output, bindings_only=False):
     if settings.get('nativeRoot'): job['nativeRoot']=settings['nativeRoot']
     job.update(outputRoot=str(output/'extracted'),meshes=meshes,bindingsOnly=bindings_only)
     write_json(output/'extract-job.json',job)
-    run_process([settings.get('powershell','pwsh.exe'),'-NoProfile','-File',HERE/'Extractor.ps1','-Job',output/'extract-job.json'],output/'extraction.log')
+    # Scope the bundled unsigned script's policy to this child process only.
+    # This neither changes saved Windows policies nor overrides Group Policy.
+    run_process([settings.get('powershell','pwsh.exe'),'-NoProfile','-ExecutionPolicy','Bypass','-File',HERE/'Extractor.ps1','-Job',output/'extract-job.json'],output/'extraction.log')
     return read_json(output/'extracted/extraction-manifest.json')
 
 def rgba_values(value):
@@ -634,7 +636,7 @@ def main():
         extracted=prepare_extraction(settings,selected,run)
         job=make_cook_job(settings,selected,extracted,run,choose_chunk(settings),args.invert_lightness,report_progress=True,**options)
         imported=candidate.import_specs(read_json(run/'Prepared.json'),job,records=selected,
-            provenance='preparer-0.4.10',options=transform_settings(args.invert_lightness,**options),source_root=run,keep_previous=args.keep_previous)
+            provenance='preparer-0.4.11',options=transform_settings(args.invert_lightness,**options),source_root=run,keep_previous=args.keep_previous)
         repair_records=material_bindings.pending_records(candidate,records)
         if repair_records:
             progress('cook',3,5,'Checking retained outfit material bindings')
