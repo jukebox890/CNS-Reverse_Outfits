@@ -82,12 +82,20 @@ def scan(settings):
             if not isinstance(data, list): raise ValueError('CNS root must be an array')
             for index, row in enumerate(data):
                 if not isinstance(row, dict): continue
-                if row.get('FitMeshType','Body') not in ('','Body') or row.get('CharacterID','EVE').upper() != 'EVE': continue
+                character = row.get('CharacterID','EVE')
+                if not isinstance(character,str):
+                    issues.append({'source':str(file),'row':index,'reason':'Invalid CharacterID'}); continue
+                if row.get('FitMeshType','Body') not in ('','Body') or character.upper() != 'EVE': continue
                 fit_id = row.get('UniqueFitID')
                 if not isinstance(fit_id, str) or not fit_id: continue
                 advanced = row.get('OutfitDatas')
-                variants = copy.deepcopy(advanced) if advanced else [dict(Mesh=m,Materials=[],Parameters=[]) for m in row.get('OutfitPaths',[])]
-                if not variants or any(not isinstance(v,dict) or not v.get('Mesh') for v in variants):
+                paths = row.get('OutfitPaths',[])
+                if advanced is not None and not isinstance(advanced,list):
+                    issues.append({'source':str(file),'id':fit_id,'reason':'OutfitDatas must be an array'}); continue
+                if not advanced and (not isinstance(paths,list) or any(not isinstance(m,str) or not m for m in paths)):
+                    issues.append({'source':str(file),'id':fit_id,'reason':'OutfitPaths must be an array of mesh paths'}); continue
+                variants = copy.deepcopy(advanced) if advanced else [dict(Mesh=m,Materials=[],Parameters=[]) for m in paths]
+                if not variants or any(not isinstance(v,dict) or not isinstance(v.get('Mesh'),str) or not v['Mesh'] for v in variants):
                     issues.append({'source':str(file),'id':fit_id,'reason':'Incomplete variant definitions'}); continue
                 records.append({'id':fit_id,'name':row.get('DisplayName',fit_id),'source':str(file),'row':index,
                                 'variants':variants,'userConfigs':row.get('UserConfigs',{}),'original':row})
@@ -592,19 +600,25 @@ def main():
     if args.scan:progress('scan',1,1,'Scanning custom CNS outfits')
     records,issues=scan(settings)
     containers=scan_containers(settings['pakRoot'])
+    unreadable=[row for row in containers if row.get('containerId') is None]
+    for row in unreadable:
+        issues.append({'code':'installed_container_unreadable','source':row['path'],
+                       'reason':row['headerError'],'filenameChunks':row['filenameChunks']})
+        print('WARNING: Cannot read installed IoStore header: '+row['path']+'. Scan continues; filename chunk reservations remain protected. Internal ID could not be checked.',flush=True)
     settings['_dependencies']=dependency_check.check(settings['pakRoot'],containers)
     for dependency in settings['_dependencies']['items']:
         print('DEPENDENCY '+dependency['name']+': '+dependency['message']+(' '+dependency['url'] if dependency['state']!='ok' else ''),flush=True)
     conflicts=duplicate_container_groups(containers)
     label_conflicts=duplicate_chunk_label_groups(containers)
     write_json(output/'container-inventory.json',{'containers':containers,'duplicateGroups':conflicts,
-        'duplicateChunkLabels':label_conflicts,'readOnly':True,'existingPackagesModified':False})
-    print('Checked '+str(len(containers))+' installed IoStore headers; '+str(len(conflicts))+' duplicate container-ID groups; '+str(len(label_conflicts))+' repeated filename chunk labels.',flush=True)
+        'duplicateChunkLabels':label_conflicts,'unreadableHeaders':unreadable,'readOnly':True,'existingPackagesModified':False})
+    print('Checked '+str(len(containers)-len(unreadable))+' installed IoStore headers; '+str(len(unreadable))+' unreadable headers; '+str(len(conflicts))+' duplicate container-ID groups; '+str(len(label_conflicts))+' repeated filename chunk labels.',flush=True)
     for conflict in conflicts:
         issues.append({'code':'existing_container_id_overlap',**conflict})
         print('Existing container-ID overlap: '+'; '.join(conflict['paths'])+'. Existing packages were not changed.',flush=True)
     for conflict in label_conflicts:
-        kind='duplicate internal IDs' if len(conflict['containerIds'])==1 else 'distinct internal IDs; not duplicate containers'
+        kind=('some internal IDs unreadable; filename reservations retained' if conflict.get('unreadableHeaders') else
+              'duplicate internal IDs' if len(conflict['containerIds'])==1 else 'distinct internal IDs; not duplicate containers')
         print('Filename chunk label '+str(conflict['chunk'])+' is reused ('+kind+').',flush=True)
     candidate=PreparedLibrary(output/'Library').begin(records=records)
     candidate.import_legacy(output)
@@ -636,7 +650,7 @@ def main():
         extracted=prepare_extraction(settings,selected,run)
         job=make_cook_job(settings,selected,extracted,run,choose_chunk(settings),args.invert_lightness,report_progress=True,**options)
         imported=candidate.import_specs(read_json(run/'Prepared.json'),job,records=selected,
-            provenance='preparer-0.4.11',options=transform_settings(args.invert_lightness,**options),source_root=run,keep_previous=args.keep_previous)
+            provenance='preparer-0.4.12',options=transform_settings(args.invert_lightness,**options),source_root=run,keep_previous=args.keep_previous)
         repair_records=material_bindings.pending_records(candidate,records)
         if repair_records:
             progress('cook',3,5,'Checking retained outfit material bindings')

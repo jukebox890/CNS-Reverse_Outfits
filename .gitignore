@@ -2,6 +2,7 @@
 /build/
 /runnable/
 /verification-output/
+/verified/
 __pycache__/
 *.pyc
 *.pyo

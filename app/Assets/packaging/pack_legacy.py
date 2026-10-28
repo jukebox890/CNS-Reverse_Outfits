@@ -10,6 +10,7 @@ import hashlib
 import json
 from pathlib import Path
 from sb_container import normalize_container
+from chunk_inventory import scan_containers
 import re
 import struct
 import subprocess
@@ -41,7 +42,9 @@ def _installed(root):
     root = Path(root)
     if not root.is_dir():
         raise ValueError('pak_root must be an existing directory')
-    return [header(path) for path in root.rglob('*.utoc') if path.is_file()]
+    # Installed packages are advisory inputs, not our generated output. Keep
+    # unreadable entries' filename reservations without aborting on other mods.
+    return scan_containers(root)
 
 
 def _conflicts(rows, chunk, container_id=None):

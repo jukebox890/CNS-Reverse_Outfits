@@ -16,7 +16,7 @@ using System.Windows.Forms;
 [assembly: AssemblyProduct("Outfit Colours Prepared Installer")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyCopyright("")]
-[assembly: AssemblyVersion("0.4.11.0")]
+[assembly: AssemblyVersion("0.4.12.0")]
 
 internal static class PreparedInstaller
 {

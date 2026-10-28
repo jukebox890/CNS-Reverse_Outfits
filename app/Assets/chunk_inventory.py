@@ -140,13 +140,30 @@ def read_utoc_header(path):
 
 
 def scan_containers(pak_root):
+    """Inventory installed containers; unrelated unreadable files are warnings.
+
+    Retain their paths and numeric filename reservations with a null identity.
+    read_utoc_header stays strict for generated/incoming package validation.
+    """
     if not pak_root:
         return []
     root = Path(pak_root)
     if not root.is_dir():
         raise ValueError('pakRoot is not a directory: '+str(root))
-    return [read_utoc_header(path) for path in sorted(root.rglob('*'))
-            if path.is_file() and path.suffix.casefold() == '.utoc']
+    rows = []
+    for path in sorted(root.rglob('*')):
+        if path.suffix.casefold() != '.utoc':
+            continue
+        try:
+            if path.is_dir():
+                continue
+            row = read_utoc_header(path)
+        except (OSError, ValueError) as error:
+            row = {'path':str(path),'containerId':None,'headerReadable':False,
+                   'filenameChunks':[int(match.group(1)) for match in _CHUNK_NAME.finditer(path.name)],
+                   'headerError':'unreadable_header' if isinstance(error,OSError) else 'invalid_or_unsupported_header'}
+        rows.append(row)
+    return rows
 
 
 def chunk_is_available(chunk, rows):
@@ -177,7 +194,7 @@ def duplicate_container_groups(rows, *, compare_toc_bytes=False):
     """
     groups = defaultdict(list)
     for row in rows:
-        if row['containerId'] != INVALID_CONTAINER_ID:
+        if row.get('containerId') not in (None, INVALID_CONTAINER_ID):
             groups[row['containerId']].append(row)
     duplicates = []
     for identity, matches in sorted(groups.items()):
@@ -205,7 +222,8 @@ def duplicate_chunk_label_groups(rows):
         for number in set(row.get('filenameChunks',[])):
             groups[number].append(row)
     return [{'chunk':number,'paths':[r['path'] for r in values],
-             'containerIds':sorted({r['containerId'] for r in values})}
+             'containerIds':sorted({r['containerId'] for r in values if r.get('containerId') is not None}),
+             'unreadableHeaders':[r['path'] for r in values if r.get('containerId') is None]}
             for number,values in sorted(groups.items()) if len(values)>1]
 
 

@@ -1,8 +1,8 @@
-# Review guide â€” 0.4.11
+# Review guide — 0.4.12
 
 ## Review scope
 
-This repository accompanies the unchanged `Outfit-Colours-Preparer-0.4.11.zip` Nexus upload. Its original SHA256 and size are in SourceManifest.json. Source manifest entries marked `shipped-file` are copied byte-for-byte from that archive; `compiler-input` entries identify the C# source and embedded icon used for the custom EXEs.
+This repository accompanies the unchanged `Outfit-Colours-Preparer-0.4.12.zip` Nexus upload. Its original SHA256 and size are in SourceManifest.json. Source manifest entries marked `shipped-file` are copied byte-for-byte from that archive; `compiler-input` entries identify the C# source and embedded icon used for the custom EXEs.
 
 The release manifest covers the full portable bundle, including third-party files not duplicated in Git. There is no private development history, machine-specific configuration or prepared outfit library in this snapshot. Repository history contains the earlier public 0.4.10 review snapshot. Publishing source does not itself guarantee scanner approval or establish that every game/outfit combination is compatible.
 
@@ -55,3 +55,7 @@ Generated textures/materials are prepared before launch. The Lua helper integrat
 BUILDING.md provides an offline compile step for both custom EXEs and an optional runnable assembly step against the hash-checked published bundle. The latter deliberately reuses third-party binaries and compiled data; it is not a complete source rebuild of every upstream dependency. Different compiler metadata can change the resulting EXE hashes.
 
 The original download includes CPython's `python313.zip` standard library inside its runtime folder. That is an upstream runtime component, not another hidden mod installer. The specific cause of Nexus quarantine has not been established; this repository is evidence for manual review, not a bypass of that review.
+
+## 0.4.12 installed-header handling
+
+Outfit entries still originate only from CNS definitions. The separate installed-container inventory reads headers to avoid conflicts across all mods. An unreadable/unsupported installed header now produces a warning and a null identity; its filename chunk reservations are retained. Unknown IDs are excluded from duplicate-ID grouping. Packaging uses the same inventory, and the installer tolerates unreadable unrelated headers after checking visible filename reservations. Incoming/generated header validation, hash checks and known collision rejection stay strict. Unknown internal IDs cannot be verified, so warnings are not a claim that every installed mod is valid or conflict-free. No existing mod is repaired, renamed, removed or changed.

@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: AssemblyTitle("Outfit Colours Preparer")]
 [assembly: AssemblyProduct("Outfit Colours Preparer")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyVersion("0.4.11.0")]
+[assembly: AssemblyVersion("0.4.12.0")]
 
 class ReversalPreparer : Form {
     readonly string home=Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"Assets");
@@ -71,7 +71,7 @@ class ReversalPreparer : Form {
         LocalSetup.Save(LocalSetup.Read(home,output));
         preferencePath=preferences??Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"OutfitReversalPreparer","Preferences.json");
         Icon=AppIcon.Load();
-        Text="Outfit Colours - Prelaunch Preparer 0.4.11";Width=1110;Height=870;MinimumSize=new Size(940,760);AutoScaleMode=AutoScaleMode.Font;
+        Text="Outfit Colours - Prelaunch Preparer 0.4.12";Width=1110;Height=870;MinimumSize=new Size(940,760);AutoScaleMode=AutoScaleMode.Font;
         var root=new TableLayoutPanel{Dock=DockStyle.Fill,ColumnCount=1,RowCount=9,Padding=new Padding(10,8,10,8)};
         root.ColumnStyles.Add(new ColumnStyle(SizeType.Percent,100));
         root.RowStyles.Add(new RowStyle(SizeType.AutoSize));root.RowStyles.Add(new RowStyle(SizeType.AutoSize));root.RowStyles.Add(new RowStyle(SizeType.AutoSize));root.RowStyles.Add(new RowStyle(SizeType.Percent,100));root.RowStyles.Add(new RowStyle(SizeType.AutoSize));root.RowStyles.Add(new RowStyle(SizeType.AutoSize));root.RowStyles.Add(new RowStyle(SizeType.AutoSize));root.RowStyles.Add(new RowStyle(SizeType.Absolute,126));

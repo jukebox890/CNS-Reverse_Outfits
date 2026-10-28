@@ -1,20 +1,20 @@
 {
   "schemaVersion": 1,
-  "version": "0.4.11",
+  "version": "0.4.12",
   "releaseArchive": {
-    "filename": "Outfit-Colours-Preparer-0.4.11.zip",
-    "sha256": "66e36b9468a839db3a8d4ec9f243b24cd1020ba62cb6d1ee6559224cf0c29e62",
-    "bytes": 142332637
+    "filename": "Outfit-Colours-Preparer-0.4.12.zip",
+    "sha256": "941114b8ef844bb4f7fd5d5bca1349d70902c0c877cbf5ee06bbfff2e97ebce4",
+    "bytes": 142333770
   },
   "files": [
     {
       "path": "Preparer.cs",
-      "sha256": "4e2100d98bcc018d4eb301975523f64438d8b76f9365e0b4f4552416668cd3ec",
+      "sha256": "dbf39273975f73a9dbc18fd4d1b51b365743c8f61883a0285035e903266fedb6",
       "kind": "compiler-input"
     },
     {
       "path": "PreparedInstaller.cs",
-      "sha256": "3288c8ea632e928091c195c8536eb586316bf3b0a14087f1bebde4b4a26084a7",
+      "sha256": "dfd4d93770d8de5937462235be3d761bacdccc5320cc9c3eb772d918bb4213c5",
       "kind": "compiler-input"
     },
     {
@@ -142,7 +142,7 @@
     },
     {
       "path": "app/Assets/chunk_inventory.py",
-      "sha256": "a9270ae07bdab3badadf2b8e0688480ed935f5248205254d7f76a212189868b6",
+      "sha256": "838eb9d72ef7978e225a4aa4f663fca8a42dfcbbb35ebae2138999409b9c68bb",
       "kind": "shipped-file",
       "releasePath": "Assets/chunk_inventory.py"
     },
@@ -190,7 +190,7 @@
     },
     {
       "path": "app/Assets/DistributionManifest.json",
-      "sha256": "c539c41fd87a7e1434e92799e9540dcd17a3ed1bc2211d0c51672d72cb4ae084",
+      "sha256": "8e2b4d09386d96fb8480e320323473286184bc64bad83105814d14e23eb740d3",
       "kind": "shipped-file",
       "releasePath": "Assets/DistributionManifest.json"
     },
@@ -214,7 +214,7 @@
     },
     {
       "path": "app/Assets/installer/Install-Prepared.ps1",
-      "sha256": "445ae5648afa995276f0c7e4bb5b475b144246c9dbf69887730984a0cf7f3a1a",
+      "sha256": "f5f52e8250e2f029d95559e56b20fd51e61faf88b81d8dc8b96f93f6dd15e5af",
       "kind": "shipped-file",
       "releasePath": "Assets/installer/Install-Prepared.ps1"
     },
@@ -226,7 +226,7 @@
     },
     {
       "path": "app/Assets/packaging/pack_legacy.py",
-      "sha256": "5b48e3f7e17034edf17933af10a6476ee632d1069551b573bb2a3db1ad5426c1",
+      "sha256": "e36597dea175d45778e629d31985f696f193ea678f14ab121550f6806d94b65a",
       "kind": "shipped-file",
       "releasePath": "Assets/packaging/pack_legacy.py"
     },
@@ -244,7 +244,7 @@
     },
     {
       "path": "app/Assets/prep.py",
-      "sha256": "eda59c767aae6a3abc592a46e82dd7f5eaafee8f516ecff75a61ed1e37a3b9eb",
+      "sha256": "0f9b3dc8a9f3df6002624918f6534ad87c27c2ea014bf93014d5c3ccc7fe788a",
       "kind": "shipped-file",
       "releasePath": "Assets/prep.py"
     },
@@ -274,7 +274,7 @@
     },
     {
       "path": "app/Assets/README.md",
-      "sha256": "cf86206a53f79e66f2cd9434c470062b478a334be8903d997a6f5e53ff578279",
+      "sha256": "c4d05bedd2d345bd596a8a9975f425071a9bde97607ccc56ca61e6b15cb5da0e",
       "kind": "shipped-file",
       "releasePath": "Assets/README.md"
     },
@@ -286,7 +286,7 @@
     },
     {
       "path": "app/Assets/RELEASE-NOTES.md",
-      "sha256": "1d682b8edb1919f3a884191e42fc1085172d0517cba080e6521de9835f97253b",
+      "sha256": "c2aa4708a3384ada5bd1b2f7503c157202fecfe24439737e41218b8fdfc0560e",
       "kind": "shipped-file",
       "releasePath": "Assets/RELEASE-NOTES.md"
     },

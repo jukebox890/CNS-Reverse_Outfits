@@ -101,13 +101,22 @@ function Assert-PreparedNoContainerConflict([string]$Paks,[object]$Plan,[string[
         if([IO.Path]::GetFileName($entry.source) -match '(?i)OutfitReversalPrepared_([0-9]+)_P') {$numbers[[int]$Matches[1]]=$entry.source}
     }
     if(-not $incoming.Count) {return}
-    foreach($toc in @(Get-ChildItem -LiteralPath $Paks -Filter '*.utoc' -File -Recurse)) {
+    $scanErrors=@()
+    $installedTocs=@(Get-ChildItem -LiteralPath $Paks -Filter '*.utoc' -File -Recurse -ErrorAction SilentlyContinue -ErrorVariable scanErrors)
+    foreach($scanError in $scanErrors) {Write-Warning 'An installed package directory could not be inspected. Its internal container IDs could not be checked.'}
+    foreach($toc in $installedTocs) {
         if($replaced.Contains([IO.Path]::GetFullPath($toc.FullName))) {continue}
-        $id=Get-PreparedContainerId $toc.FullName
-        if($incoming.ContainsKey($id)) {throw "Container ID conflict with an installed package: $($toc.FullName). Prepare again with the current mod list before installing."}
-        if($toc.Name -match '(?i)(?:pakchunk|OutfitReversalPrepared_)([0-9]+)(?:\D|$)' -and $numbers.ContainsKey([int]$Matches[1])) {
-            throw "Chunk number conflict with an installed package: $($toc.FullName). Prepare again before installing."
+        # Check visible number reservations even when an unrelated header is bad.
+        foreach($label in [regex]::Matches($toc.Name,'(?i)(?:pakchunk|OutfitReversalPrepared_)([0-9]+)(?:\D|$)')) {
+            $number=0
+            if([int]::TryParse($label.Groups[1].Value,[ref]$number) -and $numbers.ContainsKey($number)) {
+                throw "Chunk number conflict with an installed package: $($toc.FullName). Prepare again before installing."
+            }
         }
+        Assert-PreparedPlainPath $toc.FullName
+        try {$id=Get-PreparedContainerId $toc.FullName}
+        catch {Write-Warning "Cannot read installed IoStore header: $($toc.FullName). Filename reservations were checked; its internal ID could not be checked.";continue}
+        if($incoming.ContainsKey($id)) {throw "Container ID conflict with an installed package: $($toc.FullName). Prepare again with the current mod list before installing."}
     }
 }
 

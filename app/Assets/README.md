@@ -1,4 +1,4 @@
-# Outfit Colours 0.4.11
+# Outfit Colours 0.4.12
 
 Prepare alternate colours for your installed custom CNS outfits, then select them
 alongside the originals in the game's nanosuit menu.
@@ -7,7 +7,7 @@ alongside the originals in the game's nanosuit menu.
 
 - Windows x64 and Stellar Blade PC.
 - [Custom Nanosuit System 2.2](https://www.nexusmods.com/stellarblade/mods/1496).
-- [Stellar Blade UE4SS — SB UE4SS 1.3](https://www.nexusmods.com/stellarblade/mods/2952).
+- [Stellar Blade UE4SS â€” SB UE4SS 1.3](https://www.nexusmods.com/stellarblade/mods/2952).
 - Installed custom CNS outfits, with their `.dekcns.json` definitions and packages.
 
 The inspected CNS 2.2 Fix 1.4 script is also supported. Script compatibility is
@@ -103,6 +103,12 @@ application data. The default output folder is `%LOCALAPPDATA%\OutfitReversalPre
 Do not delete that library if you want to keep earlier preparations for later runs.
 
 ## Results and support
+
+Installed package headers are inspected separately for chunk conflicts; they do
+not create outfit entries. An unreadable unrelated .utoc produces a warning and
+scanning continues. Its filename chunk numbers remain reserved, but its internal
+ID cannot be checked. This does not repair or establish whether that mod works
+in game. Generated/incoming prepared packages are still validated strictly.
 
 Skin filtering is heuristic on mixed textures. Custom shaders, independent assets
 and ambiguous material settings can limit conversion. A **Partial** result means

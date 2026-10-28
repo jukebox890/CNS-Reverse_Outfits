@@ -118,8 +118,8 @@
     },
     {
       "path": "Assets/chunk_inventory.py",
-      "sha256": "a9270ae07bdab3badadf2b8e0688480ed935f5248205254d7f76a212189868b6",
-      "bytes": 10155
+      "sha256": "838eb9d72ef7978e225a4aa4f663fca8a42dfcbbb35ebae2138999409b9c68bb",
+      "bytes": 11028
     },
     {
       "path": "Assets/cns_compat.py",
@@ -173,12 +173,12 @@
     },
     {
       "path": "Assets/installer/Install-Prepared.ps1",
-      "sha256": "445ae5648afa995276f0c7e4bb5b475b144246c9dbf69887730984a0cf7f3a1a",
-      "bytes": 18283
+      "sha256": "f5f52e8250e2f029d95559e56b20fd51e61faf88b81d8dc8b96f93f6dd15e5af",
+      "bytes": 18997
     },
     {
       "path": "Assets/installer/InstallPrepared.exe",
-      "sha256": "0eb59c61b15589a427dc4f79628e5cdab6fec1739304142f5673781495f3c06c",
+      "sha256": "b232fe686d3cc78f951e2a0b6ed9a5ee57adc8ffe3e77657d90a693c87acbcb7",
       "bytes": 357376
     },
     {
@@ -193,8 +193,8 @@
     },
     {
       "path": "Assets/packaging/pack_legacy.py",
-      "sha256": "5b48e3f7e17034edf17933af10a6476ee632d1069551b573bb2a3db1ad5426c1",
-      "bytes": 8248
+      "sha256": "e36597dea175d45778e629d31985f696f193ea678f14ab121550f6806d94b65a",
+      "bytes": 8405
     },
     {
       "path": "Assets/packaging/retoc-v0.1.5/LICENSE",
@@ -213,8 +213,8 @@
     },
     {
       "path": "Assets/prep.py",
-      "sha256": "eda59c767aae6a3abc592a46e82dd7f5eaafee8f516ecff75a61ed1e37a3b9eb",
-      "bytes": 49336
+      "sha256": "0f9b3dc8a9f3df6002624918f6534ad87c27c2ea014bf93014d5c3ccc7fe788a",
+      "bytes": 50737
     },
     {
       "path": "Assets/preparation_status.py",
@@ -238,8 +238,8 @@
     },
     {
       "path": "Assets/README.md",
-      "sha256": "cf86206a53f79e66f2cd9434c470062b478a334be8903d997a6f5e53ff578279",
-      "bytes": 7207
+      "sha256": "c4d05bedd2d345bd596a8a9975f425071a9bde97607ccc56ca61e6b15cb5da0e",
+      "bytes": 7615
     },
     {
       "path": "Assets/release/reviewed-dependencies.json",
@@ -248,8 +248,8 @@
     },
     {
       "path": "Assets/RELEASE-NOTES.md",
-      "sha256": "1d682b8edb1919f3a884191e42fc1085172d0517cba080e6521de9835f97253b",
-      "bytes": 626
+      "sha256": "c2aa4708a3384ada5bd1b2f7503c157202fecfe24439737e41218b8fdfc0560e",
+      "bytes": 818
     },
     {
       "path": "Assets/Runtime/PowerShell/Accessibility.dll",
@@ -9068,7 +9068,7 @@
     },
     {
       "path": "OutfitColoursPreparer.exe",
-      "sha256": "6d635dcf75a365010de235c073efc892171d15716ea6255171bfc2f266efd1ea",
+      "sha256": "89c9b549d6dd1a97b66415e712a4d92252040abff1f3a365a6509eb50aa05489",
       "bytes": 385536
     }
   ]

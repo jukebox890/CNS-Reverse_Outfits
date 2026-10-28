@@ -1,10 +1,10 @@
-# Build 0.4.11
+# Build 0.4.12
 
 ## Requirements
 
 - Windows x64.
 - Windows PowerShell 5.1 and the .NET Framework 4.x C# compiler (`csc.exe`). Build.ps1 checks the standard Framework64/Framework locations. A game installation, Python installation and administrator rights are not needed to compile the two launchers.
-- Download this repository using **Code â†’ Download ZIP** and extract it, or clone it. Open PowerShell in the extracted repository folder.
+- Download this repository using **Code → Download ZIP** and extract it, or clone it. Open PowerShell in the extracted repository folder.
 
 ## 1. Compile both application executables
 
@@ -26,10 +26,10 @@ This **compile-only output is not a complete runnable distribution**: large thir
 
 ## 2. Assemble a runnable review copy (optional)
 
-Obtain the original **0.4.11** download submitted on Nexus Mods. Use that file, not an archive of this GitHub repository. Build.ps1 verifies its exact SHA256 before extracting anything.
+Obtain the original **0.4.12** download submitted on Nexus Mods. Use that file, not an archive of this GitHub repository. Build.ps1 verifies its exact SHA256 before extracting anything.
 
 ```powershell
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Build.ps1 -DistributionArchive "D:\Downloads\Outfit-Colours-Preparer-0.4.11.zip" -OutputName runnable
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Build.ps1 -DistributionArchive "D:\Downloads\Outfit-Colours-Preparer-0.4.12.zip" -OutputName runnable
 ```
 
 Replace the example archive location with your own. This extracts the known dependency/data bundle into `runnable/`, overlays the matching repository scripts, compiles both EXEs from the repository source, and regenerates the distribution checksums. It does not execute the supplied EXEs or contact the network during assembly. It does not install into a game.
@@ -42,7 +42,7 @@ Build.ps1 refuses an existing output folder. Use a fresh `-OutputName` for anoth
 
 ```powershell
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Verify-Source.ps1
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Verify-Source.ps1 -DistributionArchive "D:\Downloads\Outfit-Colours-Preparer-0.4.11.zip"
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Verify-Source.ps1 -DistributionArchive "D:\Downloads\Outfit-Colours-Preparer-0.4.12.zip"
 ```
 
 The second command also compares every copied shipped source file byte-for-byte with the reviewed ZIP. `review/SourceManifest.json` records the compiler inputs separately, since the .cs files were not part of the end-user ZIP.
@@ -76,3 +76,11 @@ After assembling runnable/, run:
 ```
 
 This uses temporary synthetic jobs and internet-marked unsigned scripts under RemoteSigned, AllSigned and Restricted process policies. It verifies the old command is blocked, the fixed extraction launcher succeeds, the actual extractor reaches job validation, and saved policies stay unchanged. It does not read a game or install files. Administrator-enforced policies are respected; the controlled test stops if one is active.
+
+## Scan and installed-container regression test
+
+```powershell
+& .\runnable\Assets\Runtime\Python\python.exe -B .\review\Test-ScanRobustness.py --app .\runnable
+```
+
+Five synthetic tests cover mixed readable/unreadable headers, a denied header read, filename reservations, malformed CNS rows, complete scanning and package construction, and installer conflict validation under Windows PowerShell 5.1. They use temporary fixtures, never a real game. Malformed incoming packages, known container-ID collisions and reserved filename numbers must still be rejected.
